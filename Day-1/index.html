@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login form</title>
+        <script src="index.js"></script>
+    </head>
+    <body style="background: linear-gradient(120deg,rgb(214, 252, 4),rgb(44, 252, 3));">
+
+        
+        <div id="loginPage">
+           <h1 style="text-align: center;color: rgb(8, 8, 8);">Login</h1><br>
+           <p>user name:</p><br>
+           <input id="user_name" required><br>
+           <p style="color: red;display: none;" id="user_not_found">Username not found!!!</p>
+           <p>password:</p><br>
+           <input id="pass_word" required><br>
+           <button onclick="loginAcc()">Login</button>
+           <a href="#" onclick="createLink()">create new account</a></div>
+
+
+
+           <div id="createPage" style="display: none;">
+                   <h1 style="text-align: center;color: rgb(8, 8, 8);">Create New Acccount</h1><br>
+               <p>user name:</p><br>
+            <input id="user_Name" required><br>
+            <p>Enter the password:</p><br>
+            <input id="pass_Word" required><br>
+            <p>Re-enter new Password:</p><br>
+            <input id="re_password" required><br>
+            <p style="color: red;display: none;" id="pasword_mismatch">Password Mismatch</p>
+            <p style="color: red;display: none;" id="username_exists">UserName Already Exists!!!</p>
+            <button onclick="createAcc()">create</button>
+            <a href="#"  onclick="loginLink()">Already Have An Account</a></div>
+           </div>
+
+
+
+
+           <div id="homePage" style="display: none;">
+           <h1 style="text-align: center;color: rgb(8, 8, 8);">Home page</h1><br>
+           <a href="#" onclick="loginLink()">Logout</a></div>
+            
+           </div>
+    </body>
+</html>
