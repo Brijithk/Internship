@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Arry Operations</title>
+<script src="index.js"></script>
+    </head>
+    <body style="background: greenyellow;">
+         <div style="background-color: white;">
+            <h1 style="text-align: center;">ARRAY:</h1>
+            <br>
+            <h1 id="show"></h1>
+         </div>
+         <div style="background-color: white;">
+            <h2>Select the operation you want to perform</h2><br>
+            <select name="choose" id="choose">
+                <option value="add">Add</option>
+                <option value="delLast">Delete Last Data</option>
+                <option value="arrayOverwrite">Overwrite array</option>
+                <option value="searchElement">Search an Element</option>
+                <option value="reverseArray">Reverse the Array</option>
+                <option value="delFirst">Delete first Element</option>
+                <option value="arrange">Ascending order</option>
+                <option value="modify">Modify the array</option>
+              </select>
+              <button onclick="submit()">SUBMIT</button>
+              <BR>
+         </div>
+         <div style="display: none;background-color: white;" id="addPage">
+            <h1>Select the number to be added:</h1>
+            <input id="getVal">
+            <button onclick="Add()">submit</button>
+         </div>
+         <div style="display: none;background-color: white;" id="overwritePage">
+            <h1>Enter the value to be Overwritten:</h1>
+            <input id="getValue">
+            <h1>Enter the starting index:</h1>
+            <input id="getStart">
+            <h1>Enter the Ending index:</h1>
+            <input id="getEnd">
+            <button onclick="overwrite()">submit</button>
+         </div>
+         <div id="searchelementPage" style="display: none;background-color: white;">
+            <h1>Enter the Element to be Searched:</h1>
+            <input id="getValu">
+            <button onclick="search()">submit</button>
+         </div>
+         <div id="displayPage" style="display: none;background-color: white;">
+            <h1 id="show1" style="display: none;">Element found</h1>
+            <h1 id="show2" style="display: none;">Element Not found</h1>
+         </div>
+         <div id="modifyPage" style="display: none;background-color: white;">
+            <h1>Enter the position of hte element to be modified</h1>
+            <input id="getNum">
+            <h1>Enter the alternate word</h1>
+            <input id="getStr">
+            <button onclick="modify()">submit</button>
+         </div>
+    </body>
+</html>
