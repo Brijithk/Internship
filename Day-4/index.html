@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+           
+            #show{
+                height: 40px;
+                font-size: 40px;
+                border: 2px solid black;
+                width: 500px;
+                border: none;
+                margin-left: 50px; 
+            }
+            button{
+                font-size: 30px;
+                padding: 20px;
+                border: 2px solid black;
+                margin-left: 50px; 
+                margin-top: 50px; 
+            }
+        </style>
+    </head>
+ 
+    <body>
+        <p id="show"></p>
+        <button id="one" onclick="pass(1)">1</button>
+        <button id="two" onclick="pass(2)">2</button>
+        <button id="three" onclick="pass(3)">3</button>
+        <button id="four" onclick="pass(4)">4</button><br>
+        <button id="five" onclick="pass(5)">5</button>
+        <button id="six" onclick="pass(6)">6</button>
+        <button id="seven" onclick="pass(7)">7</button>
+        <button id="eight" onclick="pass(8)">8</button><br>
+        <button id="nine" onclick="pass(9)">9</button>
+        <button id="zero" onclick="pass(0)">0</button>
+        <button id="add" onclick="pass('+')">+</button>
+        <button id="sub" onclick="pass('-')">-</button><br>
+        <button id="mul" onclick="pass('*')">*</button>
+        <button id="div" onclick="pass('/')">/</button>
+        <button id="equal" onclick="total()">=</button>
+        <button id="clr" onclick="clr()">CLR</button>
+            <script>
+              
+                var store="";
+              var num="";
+          
+            clr=()=>{
+                       store="";
+                document.getElementById("show").innerHTML="";
+            }
+          
+            pass=num=>display(num);
+             var display=val=>{
+                store+=val;
+                document.getElementById("show").innerHTML=store;
+             }
+           
+             total=()=>{
+                document.getElementById("show").innerHTML=eval(store);
+             }
+            </script>
+    </body>
+</html>
